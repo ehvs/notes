@@ -10,7 +10,7 @@
 
     ---
 
-    ![Image title](https://dummyimage.com/180x250){ align=left }
+    ![Hevellyn Gomes](/images/hevs-180x250.jpg){ align=left }
 
     For the last 7 years I have been working with OpenShift, since 3.7 version running `openshift-install` with Ansible, migrating then to a more robust OpenShift 4 approach using ignite files, and for the last 2 years, focused on the Cloud, with managed services in Azure and AWS.
 
