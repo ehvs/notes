@@ -5,19 +5,19 @@ theme:
     - content.code.copy
     - content.tabs.link
   palette:
-    # Palette toggle for light mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+        # Palette toggle for light mode
     - scheme: youtube
       toggle:
         icon: material/lightbulb 
         name: Switch to dark mode
-
-    # Palette toggle for dark mode
-    - scheme: slate
-      toggle:
-        icon: material/lightbulb-outline
-        name: Switch to light mode
   icon:
-    logo: fontawesome/solid/user-plus
+    logo: octicons/rocket-16
 extra_css:
   - stylesheets/extra.css
 plugins:

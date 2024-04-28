@@ -21,7 +21,7 @@
 
     TBD
 
-    [:octicons-arrow-right-24: Here](#)
+    [:octicons-arrow-right-24: Here](http://127.0.0.1:8000/blog/category/monitoring/)
 
 -   :fontawesome-brands-aws:{ .aws .lg .middle } __ROSA__
 
