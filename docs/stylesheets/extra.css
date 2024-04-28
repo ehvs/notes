@@ -1,0 +1,20 @@
+.sb {
+    color: #0e8a78;
+  }
+
+.prometheus {
+    color: #ce3f3c;
+}
+
+.aws {
+    color: #ce3f3c
+}
+
+[data-md-color-scheme="youtube"] {
+    --md-primary-fg-color:        #224fcc; /*navbar color*/
+    --md-primary-fg-color--light:  #90030C;
+    --md-primary-fg-color--dark:  #90030C;
+    --md-primary-bg-color:        #f8f4f4; /*navbar text color*/
+    --md-primary-bg-color--light: #e9f7ff; /*search bar text */
+    --md-accent-fg-color:         #f97f22;
+}

@@ -1,3 +1,47 @@
-site_name: My Docs test
+site_name: Hevs notes
 theme:
   name: material
+  features:
+    - content.code.copy
+    - content.tabs.link
+  palette:
+    # Palette toggle for light mode
+    - scheme: youtube
+      toggle:
+        icon: material/lightbulb 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+  icon:
+    logo: fontawesome/solid/user-plus
+extra_css:
+  - stylesheets/extra.css
+plugins:
+  - blog:
+      post_url_format: "{categories}/{slug}"
+      authors: false
+      archive_toc: true
+      categories_toc: true
+  - search
+  - tags
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences # Content tabs
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - md_in_html
+  - attr_list # Stylesheets tokens/types of strings: https://pygments.org/docs/tokens/#literals
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
