@@ -32,8 +32,6 @@ plugins:
       categories_toc: true
   - search
   - tags
-  - social:
-      cards: true
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
