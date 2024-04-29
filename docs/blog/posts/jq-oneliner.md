@@ -3,7 +3,9 @@ title: JQ Oneliners
 summary: A document with oneliners using JQ
 authors:
     - Hevellyn
-date: 2024-04-02
+date: 
+  created: 2024-04-02
+  updated: 2024-04-29
 categories:
   - Cheatsheet
 slug: jq-oneliner
@@ -64,10 +66,6 @@ When applied to each key in the labels object, `test("^node-role.kubernetes.io")
 
 This filter function is used to select only the keys in the labels object that start with `node-role.kubernetes.io`, effectively filtering out other keys. This allows us to extract only the labels related to node roles from the labels object.
 
-
-
-
-
 - ### Get specific fields values from multiple containers inside a pod
 === "Oneliner"
     ``` sh
@@ -107,7 +105,22 @@ Output:
     "requests": null
 ```
 
-- ### Extract all unique "usernames" from a json file.
+- ### Extract all unique "usernames" from a json file
 ``` 
 cat data.json | jq .user.username -r | sort | uniq -c | sort -n
+```
+
+- ### Get specific fields values from multiple pods
+
+Get the pod name, the creationTimestamp and the node where the pod is hosted.
+
+=== "Oneliner"
+  ```
+    oc get pods -o json | jq -r '.items[] | .metadata.name + " ===> " +.metadata.creationTimestamp + " ===> " +.spec.nodeName' 
+  ```
+
+Output:
+```
+my-nginx-1 ===> 2024-04-22T10:10:00Z ===> worker-hevs-westeurope1-xxxx
+my-nginx-2 ===> 2024-04-23T10:10:00Z ===> worker-hevs-westeurope1-xxxx
 ```

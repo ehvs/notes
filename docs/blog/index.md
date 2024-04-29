@@ -13,15 +13,15 @@
 
     Oneliner commands using jq, grep, awk and oc.
 
-    [:octicons-arrow-right-24: Here](http://127.0.0.1:8000/blog/category/cheatsheet/)
+    [:octicons-arrow-right-24: Here](/blog/category/cheatsheet/)
 
 -   :simple-prometheus:{ .prometheus .lg .middle } __Monitoring__
 
     ---
 
-    TBD
+    PromQL expressions.
 
-    [:octicons-arrow-right-24: Here](http://127.0.0.1:8000/blog/category/monitoring/)
+    [:octicons-arrow-right-24: Here](/blog/category/monitoring/)
 
 -   :fontawesome-brands-aws:{ .aws .lg .middle } __ROSA__
 

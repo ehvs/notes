@@ -1,10 +1,14 @@
-# Home
+## Welcome!
 
-!!! warning "Disclaimer"
+<div class="grid cards" markdown>
 
-    These notes are my own comprehension and lessons learned.
-    Does **not** represent Red Hat, nor replaces official documentation.
+- :hammer_pick:{ .lg .middle } [__Cheatsheets__](/blog/category/cheatsheet/) jq, aws and oc.
+- :test_tube:{ .lg .middle } [__Labs__](/blog/category/labs/) Deployments, experiments.
+- :simple-prometheus:{ .prometheus .lg .middle } [__Monitoring__](/blog/category/monitoring/) PromQL expressions.
+- :fontawesome-solid-network-wired:{ .lg .middle } __Networking__ TBD 
+- :fontawesome-brands-aws:{ .aws .lg .middle } __ROSA__ TBD 
 
+</div>
 <div class="grid cards" markdown>
 -   :rocket:{ .lg .middle } __About Me__
 
@@ -12,8 +16,12 @@
 
     ![Hevellyn Gomes](https://raw.githubusercontent.com/ehvs/notes/main/images/hevs-180x250.jpg){ align=left }
 
-    For the last 7 years I have been working with OpenShift, since v3.7 with the old and gold `openshift-install` with Ansible, migrating then to a more robust OpenShift 4 approach using ignite files, and for the last 2 years, focused on the Cloud, with managed services in Azure and AWS. During these years, learning the value of the customer experience has been rewarding while also working across multiple teams, always learning a new and shiny technical bit. This blog is a compilated  of everything that have been most useful for me. 🧵 An eternal work in progress.
+    This page will be an eternal work in progress with troubleshooting steps/commands and from time to time some labs. 🧵 Working for the last 7 years with OpenShift, since Ansible days (v3.7) and now currently inserted in the Cloud world with Azure :simple-microsoftazure:{ .azure } and AWS :simple-amazonaws:{ .aws } with OpenShift managed offers.
+
+    :simple-linkedin:{ .linkedin } [Find me](https://www.linkedin.com/in/hevellyngomes/)
 
 </div>
-* * *
-test, `backticks`
+!!! warning "Disclaimer"
+
+    These notes are my own comprehension and lessons learned.
+    Does **not** represent Red Hat, nor replaces official documentation.
