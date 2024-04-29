@@ -6,7 +6,7 @@ theme:
     - content.tabs.link
   palette:
     # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
+    - media: "(prefers-color-scheme: light)"
       scheme: slate
       toggle:
         icon: material/lightbulb-outline
@@ -20,6 +20,10 @@ theme:
     logo: octicons/rocket-16
 extra_css:
   - stylesheets/extra.css
+extra: 
+  social:
+    - icon: octicons/rocket-16
+      link: https://hevs.cloud
 plugins:
   - blog:
       post_url_format: "{categories}/{slug}"
@@ -28,6 +32,9 @@ plugins:
       categories_toc: true
   - search
   - tags
+  - social:
+      cards: true
+      cards_layout: default/invert
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
