@@ -21,6 +21,7 @@ This post is not a step by step from the Tutorial, but how I fixed the issues th
 
 ## Pre-requisites
 Original instructions for installations => [here](https://sdk.operatorframework.io/docs/installation/). But from my testing, at this time of writing were:
+
 - Binaries
 ```
 $ go version
@@ -65,7 +66,7 @@ Hit back-off pulling image issues, because I mistakenly skipped the [step](https
 pod/memcached-operator-controller-manager-6d57548c9f-fdh67    Back-off pulling image "controller:latest"
 Failed to pull image "controller:latest": rpc error: code = Unknown desc = reading manifest latest in docker.io/library/controller: requested access to the resource is denied
 ```
-- Solution:
+- **Solution**:
 In the file `Makefile`, set your own registry so the image can be built and pushed automatically to your registry, and then pulled inside the cluster. Eg:
 ```
 IMG = docker.io/songbird159/controller:latest
@@ -78,12 +79,12 @@ make podman-build podman-push
 ```
 
 ### Issue: `No rule to make target 'podman-build'`
-This happens because in the `Makefile` it is still pointing to be used docker-* commands, not podman.
+This happens because in the `Makefile` it is still pointing to be used docker commands, not podman.
 ```
 make podman-build podman-push Makefile
 make: *** No rule to make target 'podman-build'.  Stop.
 ```
-- Solution: Replace all docker references to **podman**. There are about 11 references.
+- **Solution**: Replace all docker references to **podman**. There are about 11 references.
 ```
 CONTAINER_TOOL ?= podman
 .PHONY: podman-build
