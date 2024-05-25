@@ -15,7 +15,6 @@ tags:
 ---
 On this exercise we will go through the issues that I found while trying the example mem-cached operator.
 <!-- more -->
-On this exercise we will go through the issues that I found while trying the example mem-cached operator.
 I used the steps from [Operator-SDK page](https://sdk.operatorframework.io/docs/building-operators/golang/tutorial) and hit issues caused by myself. 🙂
 This post is not a step by step from the Tutorial, but how I fixed the issues that I hit.
 
