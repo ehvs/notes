@@ -2,8 +2,7 @@
 
 !!! warning "Disclaimer"
 
-    These notes are my own comprehension and lessons learned.
-    Does **not** represent Red Hat, nor replaces official documentation.
+    These notes are my own comprehension and lessons learned. Does **not** represent Red Hat, nor replaces official documentation.
 
 <div class="grid cards" markdown>
 

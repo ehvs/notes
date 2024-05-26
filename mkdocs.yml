@@ -1,6 +1,7 @@
-site_name: Hevs OpenShift notes
+site_name: Hevs notes
 theme:
   name: material
+  #custom_dir: overrides
   features:
     - content.code.copy
     - content.tabs.link

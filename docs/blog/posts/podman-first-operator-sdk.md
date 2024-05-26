@@ -11,7 +11,7 @@ categories:
   - Labs
 slug: operator-sdk
 tags:
-  - operator-sdk,podman,ocp
+  - operators,podman,ocp
 ---
 On this exercise we will go through the issues that I found while trying the example mem-cached operator.
 <!-- more -->

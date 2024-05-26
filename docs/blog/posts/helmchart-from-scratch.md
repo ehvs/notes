@@ -114,7 +114,8 @@ To update a current deployment from helmchart it is used `helm upgrade`, using t
 
 
 1. After modified, list the current releases (**must be ran inside the project context**)
-> NOTE: A Release is an instance of a chart running in a Kubernetes cluster
+???+ note
+    Release is an instance of a chart running in a Kubernetes cluster
 
     ```
     ❯ helm list

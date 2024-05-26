@@ -1,4 +1,13 @@
-## Welcome!
+---
+hide:
+  - toc
+---
+## Welcome! This blog aims to be an eternal WIP 🚀
+
+
+???+ tip
+
+    New labs with Helm and Gitlab Operator, click [here](blog/category/labs/)!
 
 <div class="grid cards" markdown>
 
@@ -16,7 +25,8 @@
 
     ![Hevellyn Gomes](https://raw.githubusercontent.com/ehvs/notes/main/images/hevs-180x250.jpg){ align=left }
 
-    This page will be an eternal work in progress with troubleshooting steps/commands and from time to time some labs. 🧵 Working for the last 7 years with OpenShift, since Ansible days (v3.7) and now currently inserted in the Cloud world with Azure :simple-microsoftazure:{ .azure } and AWS :simple-amazonaws:{ .aws } with OpenShift managed offers.
+    Passionated with DevOps, specialized in the Observability stack (Prometheus, Elastic Search, Loki, Grafana). While learning and playing around with GO, Python, and developer tools.
+    Working for the last 7 years with OpenShift, since Ansible days and now currently inserted in the Cloud world with Azure :simple-microsoftazure:{ .azure } and AWS :simple-amazonaws:{ .aws }.
 
     :simple-linkedin:{ .linkedin } [Find me](https://www.linkedin.com/in/hevellyngomes/)
 
