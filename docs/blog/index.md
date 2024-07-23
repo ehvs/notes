@@ -10,7 +10,7 @@
 
     ---
 
-    Oneliner commands using jq, grep, awk and oc.
+    Oneliner commands using jq, grep, awk, git.
 
     [:octicons-arrow-right-24: Here](/blog/category/cheatsheet/)
 
@@ -22,14 +22,14 @@
 
     [:octicons-arrow-right-24: Here](/blog/category/monitoring/)
 
--   :fontawesome-brands-aws:{ .aws .lg .middle } __ROSA__
+-   :test_tube:{ .aws .lg .middle } __Labs__
 
     ---
 
-    TBD
+    All sort of experiments.
 
-    [:octicons-arrow-right-24: Here](#)
-
+    [:octicons-arrow-right-24: Here](/blog/category/labs/)
+<!---
 -   :fontawesome-solid-network-wired:{ .lg .middle } __Networking__
 
     ---
@@ -37,5 +37,5 @@
     [TBD] Notes on troubleshooting networking.
 
     [:octicons-arrow-right-24: Here](#)
-
+--->
 </div>

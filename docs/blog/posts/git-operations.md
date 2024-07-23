@@ -58,5 +58,7 @@ git commit --amend --no-edit
 ```
 git push origin feature2 -f
 ```
+!!! warning "Disclaimer"
+    Running `git push origin` without adding the branch as parameter, will add all commits to the push.
 
 Voila! Once this is done, I should be able to see the new commit SHA, with my new changes in my PR that is already open.
