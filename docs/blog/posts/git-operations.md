@@ -39,7 +39,7 @@ git pull
 2. Rebase the new branch (`feature2`) from `main`.
 Assuming that the latest changes does not affect my own changes, rebasing now from `main` should **Succeed**.
 ```
-git checkout feature1
+git checkout feature2
 git rebase main
 ```
 ???+ note
