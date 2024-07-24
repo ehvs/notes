@@ -48,6 +48,9 @@ git rebase main
 ```
 git add .
 ```
+???+ note
+    Running `git add .` adds all new and modified files to stage. It differs from `git add -u` and `git add -A`.
+    To check what changes were added to stage. Run `git status`.
 
 4. Let's now ADD these new changes to our current existing commit. The flag `--no-edit` means that I will not change my original commit message.
 ```
