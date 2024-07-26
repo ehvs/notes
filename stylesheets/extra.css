@@ -1,0 +1,28 @@
+.sb {
+    color: #0e8a78;
+  }
+
+.prometheus {
+    color: #ce3f3c;
+}
+
+.azure {
+    color:#224fcc
+}
+
+.aws {
+    color: #ce3f3c
+}
+
+.linkedin {
+    color: #0e76a8
+}
+
+[data-md-color-scheme="youtube"] {
+    --md-primary-fg-color:        #224fcc; /*navbar color*/
+    --md-primary-fg-color--light:  #90030C;
+    --md-primary-fg-color--dark:  #90030C;
+    --md-primary-bg-color:        #f8f4f4; /*navbar text color*/
+    --md-primary-bg-color--light: #e9f7ff; /*search bar text */
+    --md-accent-fg-color:         #f97f22;
+}
