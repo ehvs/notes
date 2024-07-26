@@ -6,7 +6,7 @@ authors:
     - Hevellyn
 date:
   created: 2024-06-16
-  updated: 2024-06-16
+  updated: 2024-07-26
 categories:
   - Labs
 slug: public-ingresscontroller-aro-private
@@ -30,19 +30,27 @@ az aro create --resource-group $RESOURCEGROUP --name $CLUSTER --vnet aro-vnet --
 ## Setup 
 
 ### The jumphost
-1.  Create a virtual machine; Access the virtual machine via Azure Portal, using  the web feature **SSH using Azure CLI** which, quickly connect via the browser; Or any preferred method.
+1.  Create a virtual machine:
 ```
 az vm create --resource-group $RESOURCEGROUP --zone 1 --name 'hevs-jumphost' --image 'RedHat:RHEL:8-lvm-gen2:latest' --admin-username 'azureuser' --generate-ssh-keys --size 'Standard_D2s_v3'
 ``` 
+2. Access the virtual machine via Azure Portal:
+- Either using  the web feature **SSH using Azure CLI** which, quickly connect via the browser; Or any preferred method.
+- OR habilitate the 22 Port via the UI, and using the Public IP provided, access using your private key.
+```
+ssh -i ~/.ssh/id_rsa azureuser@<publicIP>
+```
+???+ note
+    Make sure to assign permission 400 to the key. `chmod 400 ~/.ssh/id_rsa`
 
-2. Once inside the vm, download the `oc` client and add to path; **oc** client mirror, to download, [here](https://mirror.openshift.com/pub/openshift-v4/clients/ocp/).
+3. Once inside the vm, download the `oc` client and add to path; **oc** client mirror, to download, [here](https://mirror.openshift.com/pub/openshift-v4/clients/ocp/).
 ```
 $ wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/<path>.tar.gz
 $ tar -xf <file>.tar.gz
 $ sudo cp oc /usr/bin/oc
 ```
 
-3. From the Azure Portal, in the `Azure Red Hat OpenShift` service, select the cluster, and in **Connect** to get the **kubeadmin** and password, as well the Cluster API. Then from the vm:
+4. From the Azure Portal, in the `Azure Red Hat OpenShift` service, select the cluster, and in **Connect** to get the **kubeadmin** and password, as well the Cluster API. Then from the vm:
 ```
 $ oc login -u kubeadmin -p $PASSWORD --server $APIserverURL
 ```
