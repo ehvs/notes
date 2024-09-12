@@ -1,4 +1,4 @@
-site_name: Hevs notes
+site_name: Hevs Cloud notes
 theme:
   name: material
   #custom_dir: overrides
@@ -7,18 +7,20 @@ theme:
     - content.tabs.link
   palette:
     # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: light)"
+    - media: "(prefers-color-scheme: dark)"
       scheme: slate
       toggle:
         icon: material/lightbulb-outline
-        name: Switch to light mode
+        name: Switch to dark mode
         # Palette toggle for light mode
-    - scheme: youtube
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       toggle:
         icon: material/lightbulb 
         name: Switch to dark mode
   icon:
-    logo: octicons/rocket-16
+    # This is the top bar
+    logo: octicons/cloud-24
 extra_css:
   - stylesheets/extra.css
 extra: 
@@ -33,6 +35,7 @@ plugins:
       categories_toc: true
   - search
   - tags
+  - social
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
