@@ -12,7 +12,7 @@
 
     Oneliner commands using jq, grep, awk, git.
 
-    [:octicons-arrow-right-24: Here](/blog/category/cheatsheet/)
+    [:octicons-arrow-right-24: Here](category/cheatsheet/)
 
 -   :simple-prometheus:{ .prometheus .lg .middle } __Monitoring__
 
@@ -20,7 +20,7 @@
 
     PromQL expressions.
 
-    [:octicons-arrow-right-24: Here](/blog/category/monitoring/)
+    [:octicons-arrow-right-24: Here](category/monitoring/)
 
 -   :test_tube:{ .aws .lg .middle } __Labs__
 
@@ -28,14 +28,14 @@
 
     All sort of experiments.
 
-    [:octicons-arrow-right-24: Here](/blog/category/labs/)
-<!---
--   :fontawesome-solid-network-wired:{ .lg .middle } __Networking__
+    [:octicons-arrow-right-24: Here](category/labs/)
+
+-   :material-microsoft-azure:{ .azure .lg .middle } :simple-redhatopenshift:{.openshift} __ARO__
 
     ---
 
-    [TBD] Notes on troubleshooting networking.
+    Azure RedHat OpenShift related
 
-    [:octicons-arrow-right-24: Here](#)
---->
+    [:octicons-arrow-right-24: Here](category/aro/)
+
 </div>
