@@ -35,7 +35,6 @@ plugins:
       categories_toc: true
   - search
   - tags
-  - social
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
