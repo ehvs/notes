@@ -2,7 +2,7 @@
 hide:
   - toc
 ---
-## Hey! This aims to be an eternal work in progress 🚧
+## Hello! This aims to be an eternal work in progress 🚧
 
 
 ???+ tip

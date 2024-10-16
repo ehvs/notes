@@ -29,9 +29,9 @@
   }
 
 
-[data-md-color-scheme="hevs-slate"] {
+[data-md-color-scheme="slate"] {
     --md-hue: 220;
-    --md-primary-fg-color:        #1d1a27;
-    --md-accent-fg-color:  #F66151;
+    --md-primary-fg-color:        #1d1a27; /*Top bar*/
+    --md-accent-fg-color:  #F66151; /*Highlight*/
     --md-typeset-a-color: #00b336;
   }
