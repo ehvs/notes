@@ -18,11 +18,20 @@
     color: #0e76a8
 }
 
-[data-md-color-scheme="youtube"] {
-    --md-primary-fg-color:        #224fcc; /*navbar color*/
-    --md-primary-fg-color--light:  #90030C;
-    --md-primary-fg-color--dark:  #90030C;
-    --md-primary-bg-color:        #f8f4f4; /*navbar text color*/
-    --md-primary-bg-color--light: #e9f7ff; /*search bar text */
-    --md-accent-fg-color:         #f97f22;
+.golang {
+    color: #00ADD8
 }
+
+[data-md-color-scheme="hevs-material"] {
+    --md-primary-fg-color:        #313d53; /*Top bar*/
+    --md-accent-fg-color:  #F66151; /*Highlight*/
+    --md-typeset-a-color: #313d53; /*Text and Titles*/
+  }
+
+
+[data-md-color-scheme="hevs-slate"] {
+    --md-hue: 220;
+    --md-primary-fg-color:        #1d1a27;
+    --md-accent-fg-color:  #F66151;
+    --md-typeset-a-color: #00b336;
+  }

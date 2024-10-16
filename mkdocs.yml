@@ -1,6 +1,7 @@
-site_name: Hevs Cloud notes
+site_name: Hevs ☁️ notes
 theme:
   name: material
+  favicon: images/favicon2.png
   #custom_dir: overrides
   features:
     - content.code.copy
@@ -10,17 +11,20 @@ theme:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       toggle:
-        icon: material/lightbulb-outline
+        icon: material/toggle-switch
         name: Switch to dark mode
-        # Palette toggle for light mode
+    # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default
+      scheme: hevs-material
       toggle:
-        icon: material/lightbulb 
-        name: Switch to dark mode
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
   icon:
     # This is the top bar
     logo: octicons/cloud-24
+  highlightjs: true
+  hljs_languages:
+      - yaml
 extra_css:
   - stylesheets/extra.css
 extra: 

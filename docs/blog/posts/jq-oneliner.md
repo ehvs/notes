@@ -21,7 +21,7 @@ tags:
 
 [jq](https://jqlang.github.io/jq/manual/) is like sed for JSON data.
 
-- ### Listing an array of AWS instances from `providerID` + node name + labels
+### Listing an array of AWS instances from `providerID` + node name + labels
 
 === "Oneliner"
 
@@ -46,7 +46,7 @@ tags:
     ```
 
 Output:
-```
+``` { .json .annotate }
 {
   "node": "i-001",
   "hostname": "ip-10-001-002-34.eu-west-1.compute.internal",
@@ -66,7 +66,7 @@ When applied to each key in the labels object, `test("^node-role.kubernetes.io")
 
 This filter function is used to select only the keys in the labels object that start with `node-role.kubernetes.io`, effectively filtering out other keys. This allows us to extract only the labels related to node roles from the labels object.
 
-- ### Get specific fields values from multiple containers inside a pod
+### Get specific fields values from multiple containers inside a pod
 === "Oneliner"
     ``` sh
     oc get pods -o json | jq ".items[] | { pod_name: .metadata.name, containers: ( .spec.containers[].resources | { requests } ) }"
@@ -89,7 +89,7 @@ This filter function is used to select only the keys in the labels object that s
     ```
 
 Output:
-```
+``` { .json .annotate }
 {
   "pod_name": "logging-loki-gateway-68d8b7744b-qvlw6",
   "containers": {
@@ -105,12 +105,12 @@ Output:
     "requests": null
 ```
 
-- ### Extract all unique "usernames" from a json file
+### Extract all unique "usernames" from a json file
 ``` 
 cat data.json | jq .user.username -r | sort | uniq -c | sort -n
 ```
 
-- ### Get specific fields values from multiple pods
+### Get specific fields values from multiple pods
 
 Get the pod name, the creationTimestamp and the node where the pod is hosted.
 

@@ -2,7 +2,7 @@
 hide:
   - toc
 ---
-## Welcome! This blog aims to be an eternal WIP 🚀
+## Hey! This aims to be an eternal work in progress 🚧
 
 
 ???+ tip
@@ -14,7 +14,7 @@ hide:
 - :hammer_pick:{ .lg .middle } [__Cheatsheets__](blog/category/cheatsheet/) jq, awk, oc, git
 - :test_tube:{ .lg .middle } [__Labs__](blog/category/labs/) Deployments, experiments
 - :simple-prometheus:{ .prometheus .lg .middle } [__Monitoring__](blog/category/monitoring/) PromQL expressions
-- :material-microsoft-azure:{ .azure .lg .middle } :simple-redhatopenshift:{.openshift} [__ARO__](blog/category/aro/)  Azure RedHat OpenShift related
+- :material-microsoft-azure:{ .azure .lg .middle } :simple-redhatopenshift:{.openshift} [__ARO__](blog/category/aro/)  Azure RedHat OpenShift
 <!---- :fontawesome-brands-aws:{ .aws .lg .middle } __ARO__ TBD --->
 
 </div>
@@ -24,11 +24,12 @@ hide:
     ---
 
     ![Hevellyn Gomes](https://raw.githubusercontent.com/ehvs/notes/main/images/hevs-180x250.jpg){ align=left }
-    Site Reliability Engineer
+    Site Reliability Engineer at Red Hat Inc. with 7y of hands-on experience with K8S/OpenShift.
 
-    Passionated with DevOps, specialized in the Observability stack (Prometheus, Elastic Search, Loki, Grafana). While learning and playing around with GO, Python, and developer tools.
-    Working for the last 7 years with OpenShift, since Ansible days and now currently inserted in the cloudy world with Azure/AWS.
-
+    Had my MBA on Data Analysis, which confirmed that YES I'm a data oriented person! So.. I like experimenting with Machine Learning and `import sklearn`.
+    
+    Passionated with DevOps, specialized in the Observability stack (Prometheus, Elastic Search, Loki, Grafana). While learning and working with :fontawesome-brands-golang:{ .golang }.
+    
     :simple-linkedin:{ .linkedin } [Find me](https://www.linkedin.com/in/hevellyngomes/)
 
 </div>

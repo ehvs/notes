@@ -34,7 +34,7 @@
 
     ---
 
-    Azure RedHat OpenShift related
+    Azure RedHat OpenShift
 
     [:octicons-arrow-right-24: Here](category/aro/)
 

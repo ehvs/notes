@@ -29,7 +29,7 @@ Gitlab chart version: 8.0.0
 ## Install the Operator and setup the CR
 
 0. Create the Ingress Class for Nginx.
-```
+``` { .yaml .annotate }
 apiVersion: networking.k8s.io/v1
 kind: IngressClass
 metadata:
@@ -41,7 +41,7 @@ spec:
 ```
 1. Install the Gitlab Operator **Certified** version from Operator Hub.
 2. The custom resource (CR) for Gitlab.
-```
+``` { .yaml .annotate }
 apiVersion: apps.gitlab.com/v1beta1
 kind: GitLab
 metadata:
