@@ -1,0 +1,53 @@
+.sb {
+    color: #0e8a78;
+  }
+
+.prometheus {
+    color: #ce3f3c;
+}
+
+.azure {
+    color:#224fcc
+}
+
+.openshift {
+    color: #ce3f3c;
+}
+
+.k8s {
+    color:  #326CE5;
+}
+
+.linkedin {
+    color: #0e76a8;
+}
+
+.golang {
+    color: #00ADD8;
+    font-size: 1.5em;
+}
+
+[data-md-color-scheme="hevs-material"] {
+    --md-primary-fg-color:        #313d53; /*Top bar*/
+    --md-accent-fg-color:  #F66151; /*Highlight*/
+    --md-typeset-a-color: #313d53; /*Text and Titles*/
+  }
+
+
+[data-md-color-scheme="slate"] {
+    --md-hue: 220;
+    --md-primary-fg-color:        #1d1a27; /*Top bar*/
+    --md-accent-fg-color:  #F66151; /*Highlight*/
+  }
+
+ @font-face {
+    font-family: "M PLUS Code Latin", monospace;
+    src: url(https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@100..700&display=swap);
+ } 
+
+ .grid.cards {
+    font-family: 'M PLUS Code Latin', monospace; /* Apply the Google Font here */
+    font-optical-sizing: auto;
+    font-style: normal;
+    /* font-weight: bold; */
+  }
