@@ -1,9 +1,10 @@
 ---
-title: AZ commands to help with ARO investigation
+title: The AZ show
 summary: Helpful az commands
 authors:
     - Hevellyn
 date: 2024-09-12
+updated: 2024-10-31
 categories:
   - ARO
 slug: az-aro-commands
@@ -11,35 +12,52 @@ tags:
   - az, aro, cli, cheatsheet
 ---
 
-ARO (Azure Red Hat OpenShift) is a managed offer based on Azure as infrastructure, therfore from time to time some debugging on the infrastructure is needed.
-
+Some helpful `az` commands to inspect the cluster information.
 <!-- more -->
 
+###  Resource Groups
+There are two resource group for ARO:
 
+- CLUSTER Resource Group: Can be any name, and it is created by the user.
 
-###  **Resource Groups**
-#### How to find out the ARO managed resource group.
-ARO requires a user-created `resourcegroup` and for the managed side, it will create the reserved `aro-xxxx` resource group which will contain deny-assignments to ensure that configurations are not tampered.
+- MANAGED Resource Group: The name has the following convention `aro-xxx`, and hosts resources like:
+    - The storageaccount, disks, load balancers, virtual machines.
+    - It is protected with `Deny Assignment`, to ensure that won't be tampered by the user.
 
-1. Get the ARO cluster ResourceID, exporting as variable (Replace `CLUSTERNAME` and `RESOURCEGROUP` accordingly):
+#### How to find out the ARO 'managed' resource group.
+
+1. Get the ARO cluster `RESOURCEID`, exporting as variable:
 ```
-RESOURCEID=$(az aro show -n $CLUSTERNAME -g $RESOURCEGROUP --query 'id' -o tsv) ; echo $RESOURCEID
+RESOURCEID=$(az aro show -n $CLUSTERNAME -g $CLUSTER_RESOURCEGROUP --query 'id' -o tsv) ; echo $RESOURCEID
 ```
 
-2. Get the **Managed** Resource Group, exporting as in a variable
+2. Get the **Managed** Resource Group, exporting in a variable
 ```
 MANAGED_RG=$(az group list --query "[?managedBy=='$RESOURCEID'].name" -o tsv) ; echo $MANAGED_RG
 ```
 
-or the full JSON response
-```
-az group list --query "[?managedBy=='$RESOURCEID']"
-```
+  - Alternatively, the full JSON response:
+  ```
+  az group list --query "[?managedBy=='$RESOURCEID']"
+  ```
 
-### **Storage Accounts**
+### Storage Accounts
 #### Storage Lockdown
 Check if Storage Lockdown is enabled for Storage Account Cluster and Image Registry (this is set by default). `AllowBlobPublicAccess` must be set to **false**. This is a default Azure [feature](https://azure.microsoft.com/en-us/updates/choose-to-allow-or-disallow-blob-public-access-on-azure-storage-accounts/).
 
 ```
 az storage account list -g $MANAGED_RG --query "[].{NAME:name, AllowBlobPublicAccess:allowBlobPublicAccess,MinimumTlsVersion:minimumTlsVersion}" -o table
+```
+
+### Networking
+#### Public or Private?
+
+- API and Ingress
+```
+az aro show -n $CLUSTERNAME -g $CLUSTER_RESOURCEGROUP --query='{api:apiserverProfile.visibility,ingress:ingressProfiles[*].{name: name,visibility: visibility}}'
+```
+
+- Did I set UDR (UserDefinedRouting)?
+```
+az aro show -n $CLUSTERNAME -g $CLUSTER_RESOURCEGROUP --query 'networkProfile.outboundType'
 ```

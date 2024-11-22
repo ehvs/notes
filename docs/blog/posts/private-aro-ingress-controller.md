@@ -8,7 +8,7 @@ date:
   created: 2024-06-16
   updated: 2024-07-26
 categories:
-  - Labs
+  - ARO
 slug: public-ingresscontroller-aro-private
 tags:
   - aro, azure, ingresscontroller, openshift
