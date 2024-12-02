@@ -26,6 +26,14 @@ There are two resource group for ARO:
 
 #### How to find out the ARO 'managed' resource group.
 
+##### Method 1
+
+```
+MANAGED_RG="aro-$(az aro show -n $CLUSTERNAME -g $CLUSTER_RESOURCEGROUP --query 'clusterProfile.domain' -o tsv)"; echo $MANAGED_RG
+```
+
+##### Method 2
+
 1. Get the ARO cluster `RESOURCEID`, exporting as variable:
 ```
 RESOURCEID=$(az aro show -n $CLUSTERNAME -g $CLUSTER_RESOURCEGROUP --query 'id' -o tsv) ; echo $RESOURCEID
@@ -36,10 +44,11 @@ RESOURCEID=$(az aro show -n $CLUSTERNAME -g $CLUSTER_RESOURCEGROUP --query 'id' 
 MANAGED_RG=$(az group list --query "[?managedBy=='$RESOURCEID'].name" -o tsv) ; echo $MANAGED_RG
 ```
 
-  - Alternatively, the full JSON response:
-  ```
-  az group list --query "[?managedBy=='$RESOURCEID']"
-  ```
+##### Method 3
+Alternatively, the full JSON response:
+```
+az group list --query "[?managedBy=='$RESOURCEID']"
+```
 
 ### Storage Accounts
 #### Storage Lockdown
@@ -60,4 +69,11 @@ az aro show -n $CLUSTERNAME -g $CLUSTER_RESOURCEGROUP --query='{api:apiserverPro
 - Did I set UDR (UserDefinedRouting)?
 ```
 az aro show -n $CLUSTERNAME -g $CLUSTER_RESOURCEGROUP --query 'networkProfile.outboundType'
+```
+
+### Service Principal
+
+- What is the ServicePrincipal attached to my cluster?
+```
+az aro show -n $CLUSTERNAME -g CLUSTER_RESOURCEGROUP --query 'servicePrincipalProfile.clientId' -o tsv
 ```

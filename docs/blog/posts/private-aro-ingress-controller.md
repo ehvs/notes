@@ -6,7 +6,7 @@ authors:
     - Hevellyn
 date:
   created: 2024-06-16
-  updated: 2024-07-26
+  updated: 2024-12-02
 categories:
   - ARO
 slug: public-ingresscontroller-aro-private
@@ -26,6 +26,11 @@ az aro create --resource-group $RESOURCEGROUP --name $CLUSTER --vnet aro-vnet --
 - A "jumphost" VM  inside same cluster resource group.
 
 - A DNS domain with hosting.
+
+#### If Ingress is Public
+
+If Ingress visibility is Public, then make sure to add the proper sharding to the **default** IngressController, otherwise, all requests will be routed to it.
+- About shards, [here](https://docs.redhat.com/en/documentation/openshift_container_platform/4.16/html-single/networking/index#nw-ingress-sharding-concept_configuring-ingress-cluster-traffic-ingress-controller)
 
 ## Setup 
 
@@ -104,3 +109,16 @@ And voila, application is reachable for the internet!
 $ curl example.hevshow.dns-dynamic.net  
 Hello OpenShift!
 ```
+
+## Extra - Troubleshooting 🕵🏻
+
+Check IP source
+```
+nslookup example.hevshow.dns-dynamic.net
+```
+
+Resolves the domain using the Public IP from IC. (Use port 80 if 'http', 443 if 'https')
+```
+curl --resolve example.hevshow.dns-dynamic.net:80:$IP http://example.hevshow.dns-dynamic.net --verbose
+```
+
