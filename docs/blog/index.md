@@ -6,36 +6,34 @@
 
 <div class="grid cards" markdown>
 
--   :hammer_pick:{ .lg .middle } __Cheatsheets__
+-   :robot:{ .lg .middle } [__AI Stuff__](category/ai/)
+    
+    ---
+
+    Experimenting with RAG
+
+-   :hammer_pick:{ .lg .middle } [__Cheatsheets__](category/cheatsheet/)
 
     ---
 
     Oneliner commands using jq, grep, awk, git.
 
-    [:octicons-arrow-right-24: Here](category/cheatsheet/)
-
--   :simple-prometheus:{ .prometheus .lg .middle } __Monitoring__
+-   :simple-prometheus:{ .prometheus .lg .middle } [__Monitoring__](category/monitoring/)
 
     ---
 
     PromQL expressions.
 
-    [:octicons-arrow-right-24: Here](category/monitoring/)
-
--   :test_tube:{ .aws .lg .middle } __Labs__
+-   :test_tube:{ .aws .lg .middle } [__Labs__](category/labs/)
 
     ---
 
     All sort of experiments.
 
-    [:octicons-arrow-right-24: Here](category/labs/)
-
--   :material-microsoft-azure:{ .azure .lg .middle } :simple-redhatopenshift:{.openshift} __ARO__
+-   :simple-redhatopenshift:{.openshift} [__ARO__](category/aro/)
 
     ---
 
     Azure RedHat OpenShift
-
-    [:octicons-arrow-right-24: Here](category/aro/)
 
 </div>
