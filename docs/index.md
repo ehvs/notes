@@ -30,7 +30,7 @@ hide:
 
     ---
 
-    ![Hevellyn Gomes](https://raw.githubusercontent.com/ehvs/notes/main/images/profilepic.jpg){ align=left }
+    ![Hevellyn Gomes](https://raw.githubusercontent.com/ehvs/notes/main/images/profilepic.jpg){ align=left, width=150 }
 
     Site Reliability Engineer at Red Hat Inc. with 7y of hands-on experience with :simple-kubernetes:{ .k8s } K8S/OpenShift.
 
