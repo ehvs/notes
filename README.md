@@ -10,7 +10,7 @@ Blog using mkdocs
 
 ### Local
 ```bash
-mkdocs serve
+mkdocs serve --livereload
 ```
 
 ### Container (Podman) — any machine, no local Python needed

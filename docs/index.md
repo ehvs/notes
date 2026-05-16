@@ -7,9 +7,11 @@ hide:
 
 ???+ tip
 
-    New labs with Helm and Gitlab Operator, click [here](blog/category/labs/)!
+    Starting up with AI? Click [here](blog/category/labs/)!
 
 <div class="grid" markdown>
+:robot:{ .lg .middle } [__AI Stuff__](blog/category/ai/) Experimenting with RAG
+{ .card }
 
 :hammer_pick:{ .lg .middle } [__Cheatsheets__](blog/category/cheatsheet/) jq, awk, oc, git
 { .card }
@@ -20,7 +22,7 @@ hide:
 :simple-prometheus:{ .prometheus .lg .middle } [__Monitoring__](blog/category/monitoring/) PromQL expressions
 { .card }
 
-:material-microsoft-azure:{ .azure .lg .middle } :simple-redhatopenshift:{.openshift} [__ARO__](blog/category/aro/)  Azure RedHat OpenShift
+:simple-redhatopenshift:{.openshift} [__ARO__](blog/category/aro/)  Azure RedHat OpenShift
 { .card }
 <!---- :fontawesome-brands-aws:{ .aws .lg .middle } __ARO__ TBD --->
 
@@ -30,18 +32,17 @@ hide:
 
     ---
 
-    ![Hevellyn Gomes](https://raw.githubusercontent.com/ehvs/notes/main/images/profilepic.jpg){ align=left, width=150 }
+    ![Hevellyn Gomes](https://raw.githubusercontent.com/ehvs/notes/main/images/profilepic.jpg){ align=left style="width:150px" }
 
-    Site Reliability Engineer at Red Hat Inc. with 7y of hands-on experience with :simple-kubernetes:{ .k8s } K8S/OpenShift.
+    Site Reliability Engineer at Red Hat with 8 years of hands-on experience running :simple-kubernetes:{ .k8s } Kubernetes and OpenShift at scale. My work has taken me deep into observability — designing and
+  tuning stacks with Prometheus, Elasticsearch, Loki, and Grafana, and advising customers on sizing, configuration, and production troubleshooting.
 
-    I hold an MBA in Data Analysis, affirming my passion for data-driven decision-making. 
+    I hold a master in Data Analysis and Machine Learning model developmnent, which fuels my interest in data-driven decision-making and pulls me toward Machine Learning and AI on the side.
     
-    This has led me to enjoy exploring the Machine Learning world with `import sklearn`.
+    This has led me to enjoy exploring the Machine Learning world and AI.
 
-    During my journey, I had the opportunity to work closely with customers to configure observability stacks, such as Prometheus, ElasticSearch, Loki, and Grafana. Adivising on sizing recommendations, configurations and troubleshooting problems.
+    Dving now with :fontawesome-brands-golang:{ .golang } while working on Azure cloud and cloud-native infrastructure.
 
-    I am diving now with :fontawesome-brands-golang:{ .golang } while working on Azure cloud and it's ecosystem.
-    
     :fontawesome-brands-linkedin-in:{ .linkedin } **[let's connect](https://www.linkedin.com/in/hevellyngomes/)**
 
 </div>
