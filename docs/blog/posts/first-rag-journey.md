@@ -12,6 +12,9 @@ tags:
   - ai, rag, artificial inteligence
 ---
 
+A completely honest account of what it's like to build your first Retrieval-Augmented Generation system, including the part where it told me Hermione was Harry's school.
+<!-- more -->
+
 # I Built a RAG App and It Only Took Me Four Minutes Per Answer (at first)
 
 *A completely honest account of what it's like to build your first Retrieval-Augmented Generation system, including the part where it told me Hermione was Harry's school.*
