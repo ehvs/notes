@@ -68,9 +68,9 @@ On a Kubernetes node, PSI doesn't require any bespoke plumbing anymore. At the h
 
 Recommended reading:
 
-* https://kubernetes.io/blog/2026/05/12/kubernetes-v1-36-psi-metrics-ga/ 
-* https://github.com/kubernetes/enhancements/issues/4205
-* https://kubernetes.io/docs/reference/instrumentation/understand-psi-metrics/ 
+* [https://kubernetes.io/blog/2026/05/12/kubernetes-v1-36-psi-metrics-ga/](https://kubernetes.io/blog/2026/05/12/kubernetes-v1-36-psi-metrics-ga/)
+* [https://github.com/kubernetes/enhancements/issues/4205](https://github.com/kubernetes/enhancements/issues/4205)
+* [https://kubernetes.io/docs/reference/instrumentation/understand-psi-metrics/](https://kubernetes.io/docs/reference/instrumentation/understand-psi-metrics/) 
 
 ### The experiment
 
