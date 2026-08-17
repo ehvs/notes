@@ -12,11 +12,14 @@ tags:
   - ai, memory, llm, models, artificial inteligence, rss, pss, kernel
 ---
 
+I've been working with Kubernetes and OpenShift for years now, and sizing the memory for the workload is a novel that it is never old enough. Because Prometheus makes super easy, perhaps too easy, with the expressions, it is easy to get mislead about what they actually mean underneath and what is the impact.  On this first part we dig into the VM Host perspective for memory and mmap, and that relates to AI workload.
+<!-- more -->
+
 # The three walls of memory, in the context of AI Models (Part 1)
 
 ## Part 1: Inside the host, going deeper than container_memory_working_set_bytes
 
-I've been working with Kubernetes and OpenShift for years now, and sizing the memory for the workload is a novel that it is never old enough. Because Prometheus makes super easy, perhaps too easy, with the expressions, it is easy to get mislead about what they actually mean underneath and what is the impact.  On this blog post you will find some analogies that helped me to understand and visualise (I'm a visual learner).
+I've been working with Kubernetes and OpenShift for years now, and sizing the memory for the workload is a novel that it is never old enough. Because Prometheus makes super easy, perhaps too easy, with the expressions, it is easy to get mislead about what they actually mean underneath and what is the impact.  On this first part we dig into the VM Host perspective for memory and mmap, and that relates to AI workload.
 
 Per example `container_memory_working_set_bytes` it is the one used by K8S, for decisions of evicion and OOM. Why? I would arqgue because it is safe enough, which is ok for most workload. But for AI workloads, you will need more details and deeper understand of how reading that 70GB of data and still be responsive without crashing, and spoiler alert, that metric will not work.
 

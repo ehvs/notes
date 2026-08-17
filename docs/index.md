@@ -7,7 +7,7 @@ hide:
 
 ???+ tip
 
-    Starting up with AI? Click [here](blog/category/labs/)!
+    Starting up with AI? Click [here](blog/category/ai/)!
 
 <div class="grid" markdown>
 :robot:{ .lg .middle } [__AI Stuff__](blog/category/ai/) Experimenting with RAG
