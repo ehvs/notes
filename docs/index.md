@@ -37,16 +37,14 @@ hide:
 
     ---
 
-    ![Hevellyn Gomes](https://raw.githubusercontent.com/ehvs/notes/main/images/profilepic.jpg){ align=left style="width:150px" }
+    ![Hevellyn Gomes](images/profilepic.jpg){ align=left style="width:150px" }
 
     Site Reliability Engineer at Red Hat with 8 years of hands-on experience running :simple-kubernetes:{ .k8s } Kubernetes and OpenShift at scale. My work has taken me deep into observability — designing and
   tuning stacks with Prometheus, Elasticsearch, Loki, and Grafana, and advising customers on sizing, configuration, and production troubleshooting.
 
     I hold a master in Data Analysis and Machine Learning model developmnent, which fuels my interest in data-driven decision-making and pulls me toward Machine Learning and AI on the side.
     
-    This has led me to enjoy exploring the Machine Learning world and AI.
-
-    Dving now with :fontawesome-brands-golang:{ .golang } while working on Azure cloud and cloud-native infrastructure.
+    Diving now with :fontawesome-brands-golang:{ .golang } while working on Azure cloud and cloud-native infrastructure.
 
     :fontawesome-brands-linkedin-in:{ .linkedin } **[let's connect](https://www.linkedin.com/in/hevellyngomes/)**
 
