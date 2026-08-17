@@ -11,7 +11,8 @@
     ---
 
     * [Experimenting with RAG](posts/first-rag-journey.md)
-    * [The three walls of memory (3 part series)](posts/llm-models-memory.md)
+    * [The three walls of memory (Part 1: the host)](posts/part1-memory-the-host.md)
+    * [The three walls of memory (Part 2: cgroups)](posts/part2-memory-cgroups.md)
 
 -   :hammer_pick:{ .lg .middle } [__Cheatsheets__](category/cheatsheet/)
 

@@ -14,7 +14,8 @@ hide:
 <small markdown>
 <br>
 [Experimenting with RAG](blog/posts/first-rag-journey.md)<br>
-[The three walls of memory (3 part series)](blog/posts/llm-models-memory.md)
+[The three walls of memory (Part 1: the host)](blog/posts/part1-memory-the-host.md)<br>
+[The three walls of memory (Part 2: cgroups)](blog/posts/part2-memory-cgroups.md)
 </small>
 { .card }
 
