@@ -58,12 +58,13 @@ RSS double-counts shared memory — two processes sharing a folder both get bill
 For context of AI workload...
 Separate `container_memory_rss` (anonymous, activations, KV cache, real buffers) from `container_memory_cache` (weights loaded via mmap), and size requests/limits off RSS plus a margin, not off the total working set.
 
-### How to do that? 
+### How to do that? (Spoilers of part 2)
 Use PSI (memory.pressure, some/full) as the actual trigger for pressure decisions, instead of a byte threshold — this is exactly the point your post is building toward for its closing. If possible, use `memory.low/memory.min` to protect the "hot" RSS (active KV cache), and let the weights cache be the first thing sacrificed under pressure.
 For model-serving autoscaling, prefer latency/queue-depth/GPU-utilization signals over memory bytes, since memory here is dominated by cache noise.
 
 #### In Kubernetes
-On a Kubernetes node, PSI doesn't require any bespoke plumbing anymore. At the host level, node-exporter exposes it out of the box through its pressure collector. At the pod and container level, Kubernetes now collects it natively in v1.36, exposed through the same `/metrics/cadvisor` endpoint that already serves `container_memory_working_set_bytes`. Wire an alert on some avg60 instead of a raw byte threshold, and the argument in this post stops being a lab exercise and becomes something a cluster can act on.
+On a Kubernetes node, PSI doesn't require any bespoke plumbing anymore. At the host level, node-exporter exposes it out of the box through its pressure collector. At the pod and container level, Kubernetes now collects it natively in v1.36, exposed through the same `/metrics/cadvisor` endpoint that already serves `container_memory_working_set_bytes`. 
+- We will go deeper tho on this in the part 2.
 
 Recommended reading:
 
