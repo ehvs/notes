@@ -10,7 +10,8 @@
     
     ---
 
-    Experimenting with RAG
+    * [Experimenting with RAG](posts/first-rag-journey.md)
+    * [The three walls of memory (3 part series)](posts/llm-models-memory.md)
 
 -   :hammer_pick:{ .lg .middle } [__Cheatsheets__](category/cheatsheet/)
 

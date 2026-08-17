@@ -10,7 +10,12 @@ hide:
     Starting up with AI? Click [here](blog/category/ai/)!
 
 <div class="grid" markdown>
-:robot:{ .lg .middle } [__AI Stuff__](blog/category/ai/) Experimenting with RAG
+:robot:{ .lg .middle } [__AI Stuff__](blog/category/ai/)
+<small markdown>
+<br>
+[Experimenting with RAG](blog/posts/first-rag-journey.md)<br>
+[The three walls of memory (3 part series)](blog/posts/llm-models-memory.md)
+</small>
 { .card }
 
 :hammer_pick:{ .lg .middle } [__Cheatsheets__](blog/category/cheatsheet/) jq, awk, oc, git

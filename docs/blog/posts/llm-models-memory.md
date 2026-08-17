@@ -12,16 +12,14 @@ tags:
   - ai, memory, llm, models, artificial inteligence, rss, pss, kernel
 ---
 
-I've been working with Kubernetes and OpenShift for years now, and sizing the memory for the workload is a novel that it is never old enough. Because Prometheus makes super easy, perhaps too easy, with the expressions, it is easy to get mislead about what they actually mean underneath and what is the impact.  On this first part we dig into the VM Host perspective for memory and mmap, and that relates to AI workload.
+I've been working with Kubernetes and OpenShift for years now, and sizing the memory for the workload is a novel that it is never old enough. Because Prometheus makes super easy, perhaps too easy, with the expressions, it is easy to get mislead about what they actually mean underneath and what is the impact. So in this first part we dig into the VM Host perspective for memory and mmap, and concludes how that relates to AI workload.
 <!-- more -->
 
 # The three walls of memory, in the context of AI Models (Part 1)
 
 ## Part 1: Inside the host, going deeper than container_memory_working_set_bytes
 
-I've been working with Kubernetes and OpenShift for years now, and sizing the memory for the workload is a novel that it is never old enough. Because Prometheus makes super easy, perhaps too easy, with the expressions, it is easy to get mislead about what they actually mean underneath and what is the impact.  On this first part we dig into the VM Host perspective for memory and mmap, and that relates to AI workload.
-
-Per example `container_memory_working_set_bytes` it is the one used by K8S, for decisions of evicion and OOM. Why? I would arqgue because it is safe enough, which is ok for most workload. But for AI workloads, you will need more details and deeper understand of how reading that 70GB of data and still be responsive without crashing, and spoiler alert, that metric will not work.
+The metric `container_memory_working_set_bytes` it is the one used by K8S, for decisions of evicion and OOM. Why? I would arqgue because it is safe enough, which is ok for most workload. But for AI workloads, you will need more details and deeper understand of how reading that 70GB of data and still be responsive without crashing, and spoiler alert, that metric will not work.
 
 Most inference serving stacks don't load model weights with a `read()` into a heap buffer anymore. `llama.cpp` mmaps GGUF files. HuggingFace's `safetensors` mmaps by default on Linux. vLLM and PyTorch's newer loaders do the same. The reason is practical: a `read()` copies gigabytes of weights twice, at first in the page cache, another in your buffer, and it's proportional to file size, so a 70GB checkpoint means minutes of cold-start latency before the first token. `mmap` skips the copy entirely: the mapping *is* the page cache entry, pages fault in lazily as layers are actually touched, and startup is near-instant regardless of file size. It's also what makes sparse-activation architectures — mixture-of-experts models that only touch a handful of experts per request — practical: unused experts simply never get paged in.
 
@@ -58,7 +56,7 @@ RSS double-counts shared memory — two processes sharing a folder both get bill
 ## Wraping up and what it means in K8S context
 
 For context of AI workload...
-Separate `container_memory_rss` (anonymous — activations, KV cache, real buffers) from `container_memory_cache` (weights loaded via mmap), and size requests/limits off RSS plus a margin, not off the total working set.
+Separate `container_memory_rss` (anonymous, activations, KV cache, real buffers) from `container_memory_cache` (weights loaded via mmap), and size requests/limits off RSS plus a margin, not off the total working set.
 
 ### How to do that? 
 Use PSI (memory.pressure, some/full) as the actual trigger for pressure decisions, instead of a byte threshold — this is exactly the point your post is building toward for its closing. If possible, use `memory.low/memory.min` to protect the "hot" RSS (active KV cache), and let the weights cache be the first thing sacrificed under pressure.
@@ -68,6 +66,7 @@ For model-serving autoscaling, prefer latency/queue-depth/GPU-utilization signal
 On a Kubernetes node, PSI doesn't require any bespoke plumbing anymore. At the host level, node-exporter exposes it out of the box through its pressure collector. At the pod and container level, Kubernetes now collects it natively in v1.36, exposed through the same `/metrics/cadvisor` endpoint that already serves `container_memory_working_set_bytes`. Wire an alert on some avg60 instead of a raw byte threshold, and the argument in this post stops being a lab exercise and becomes something a cluster can act on.
 
 Recommended reading:
+
 * https://kubernetes.io/blog/2026/05/12/kubernetes-v1-36-psi-metrics-ga/ 
 * https://github.com/kubernetes/enhancements/issues/4205
 * https://kubernetes.io/docs/reference/instrumentation/understand-psi-metrics/ 
